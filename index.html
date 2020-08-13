@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Birthplaces of Professional Athletes</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .esri-component.esri-legend.esri-widget.esri-widget--panel {
+        width: 150px;
+        height: 300px;
+      }
+
+      #applicationDiv {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      #viewDiv {
+        width: 100%;
+        height: 100%;
+        flex: 1 1 auto;
+        order: 1;
+      }
+
+      #titleDiv {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2019rem;
+        padding: 10px;
+      }
+
+      #layerToggle {
+        width: 75px;
+        top: 20px;
+        right: 20px;
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px;
+        opacity: 0.75;
+      }
+
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.16/"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="applicationDiv">
+      <div id="viewDiv">
+        <div id="titleDiv" class="esri-widget">Birthplaces of Professional Athletes</div>
+      </div>
+      <span id="layerToggle" class="esri-widget">
+        <div>
+          <input type="checkbox" checked id="nbaLayer" /> NBA
+        </div>
+        <div>
+          <input type="checkbox" checked id="nhlLayer" /> NHL
+        </div>
+        <div>
+          <input type="checkbox" checked id="mlbLayer" /> MLB
+        </div>
+        <div>
+          <input type="checkbox" checked id="nflLayer" /> NFL
+        </div>
+      </span>
+    </div>
+  </body>
+</html>
